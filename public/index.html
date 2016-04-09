@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+     <title> login autonomo</title>
+     <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+    <script>
+        function valida(){
+            if(document.login.password1.value != document.login.password2.value){
+                alert("La password di conferma è errata.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name='login' action="user"  method="post" >
+        <table>
+            <tr>
+                <td>Nome</td>
+                <td><input type='text' name='nome' size='20' pattern="([A-Z]|[a-z])*" required autofocus></td>
+            </tr>
+
+            <tr>
+                <input type="reset" value="Reset">
+                <td><input type='submit' value='invia'></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
